@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		6245BE77220CDE3A006A8089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245BE76220CDE3A006A8089 /* AppDelegate.swift */; };
-		6245BE79220CDE3A006A8089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245BE78220CDE3A006A8089 /* ViewController.swift */; };
+		6245BE79220CDE3A006A8089 /* OpenPantryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245BE78220CDE3A006A8089 /* OpenPantryController.swift */; };
 		6245BE7C220CDE3A006A8089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6245BE7A220CDE3A006A8089 /* Main.storyboard */; };
 		6245BE7E220CDE3B006A8089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6245BE7D220CDE3B006A8089 /* Assets.xcassets */; };
 		6245BE81220CDE3B006A8089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6245BE7F220CDE3B006A8089 /* LaunchScreen.storyboard */; };
+		6245BE8E220CE0C8006A8089 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245BE8D220CE0C8006A8089 /* AppError.swift */; };
+		6245BE95220CE2CB006A8089 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245BE94220CE2CB006A8089 /* Recipe.swift */; };
+		6245BE98220CE807006A8089 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245BE97220CE807006A8089 /* DataPersistenceManager.swift */; };
+		6245BE9B220DD513006A8089 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245BE9A220DD513006A8089 /* RecipeViewController.swift */; };
+		6252C6ED2226F10200DB6DB0 /* SecretKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6252C6EC2226F10200DB6DB0 /* SecretKeys.swift */; };
+		6252C6F02226F32600DB6DB0 /* RecipeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6252C6EF2226F32600DB6DB0 /* RecipeAPIClient.swift */; };
+		62AAE06E222D761C00DF8BBC /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAE06D222D761C00DF8BBC /* RecipeView.swift */; };
+		62AAE071222D763D00DF8BBC /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAE070222D763D00DF8BBC /* RecipeCell.swift */; };
+		BACAF70DD93D20B1B3B58589 /* Pods_OpenPantry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797275D9F45B5A1D43A372FD /* Pods_OpenPantry.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6245BE73220CDE3A006A8089 /* OpenPantry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPantry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6245BE76220CDE3A006A8089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6245BE78220CDE3A006A8089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6245BE78220CDE3A006A8089 /* OpenPantryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPantryController.swift; sourceTree = "<group>"; };
 		6245BE7B220CDE3A006A8089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6245BE7D220CDE3B006A8089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6245BE80220CDE3B006A8089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6245BE82220CDE3B006A8089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6245BE8D220CE0C8006A8089 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		6245BE94220CE2CB006A8089 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		6245BE97220CE807006A8089 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
+		6245BE9A220DD513006A8089 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		6252C6EC2226F10200DB6DB0 /* SecretKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKeys.swift; sourceTree = "<group>"; };
+		6252C6EF2226F32600DB6DB0 /* RecipeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPIClient.swift; sourceTree = "<group>"; };
+		62AAE06D222D761C00DF8BBC /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		62AAE070222D763D00DF8BBC /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		797275D9F45B5A1D43A372FD /* Pods_OpenPantry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenPantry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF6162A50B5D9E1D7C71F93 /* Pods-OpenPantry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenPantry.debug.xcconfig"; path = "Target Support Files/Pods-OpenPantry/Pods-OpenPantry.debug.xcconfig"; sourceTree = "<group>"; };
+		FF3D89663CACBA202DBA9532 /* Pods-OpenPantry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenPantry.release.xcconfig"; path = "Target Support Files/Pods-OpenPantry/Pods-OpenPantry.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BACAF70DD93D20B1B3B58589 /* Pods_OpenPantry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A2FFCEAE484291C7D320BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DF6162A50B5D9E1D7C71F93 /* Pods-OpenPantry.debug.xcconfig */,
+				FF3D89663CACBA202DBA9532 /* Pods-OpenPantry.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6245BE6A220CDE3A006A8089 = {
 			isa = PBXGroup;
 			children = (
 				6245BE75220CDE3A006A8089 /* OpenPantry */,
 				6245BE74220CDE3A006A8089 /* Products */,
+				18A2FFCEAE484291C7D320BC /* Pods */,
+				C05FAA3367B78AE6BDB52C23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +86,94 @@
 		6245BE75220CDE3A006A8089 /* OpenPantry */ = {
 			isa = PBXGroup;
 			children = (
-				6245BE76220CDE3A006A8089 /* AppDelegate.swift */,
-				6245BE78220CDE3A006A8089 /* ViewController.swift */,
+				6245BE8C220CE07E006A8089 /* NetworkServices */,
+				6252C6EE2226F10600DB6DB0 /* Keys */,
+				6245BE99220CE82F006A8089 /* Data Helper */,
+				6245BE96220CE313006A8089 /* Model */,
+				6245BE89220CE028006A8089 /* Contollers */,
+				62AAE06F222D762100DF8BBC /* View */,
+				62AAE072222D765000DF8BBC /* Cell */,
+				6245BE88220CE011006A8089 /* SupportFiles */,
 				6245BE7A220CDE3A006A8089 /* Main.storyboard */,
-				6245BE7D220CDE3B006A8089 /* Assets.xcassets */,
-				6245BE7F220CDE3B006A8089 /* LaunchScreen.storyboard */,
 				6245BE82220CDE3B006A8089 /* Info.plist */,
 			);
 			path = OpenPantry;
+			sourceTree = "<group>";
+		};
+		6245BE88220CE011006A8089 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6245BE76220CDE3A006A8089 /* AppDelegate.swift */,
+				6245BE7D220CDE3B006A8089 /* Assets.xcassets */,
+				6245BE7F220CDE3B006A8089 /* LaunchScreen.storyboard */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		6245BE89220CE028006A8089 /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				6245BE78220CDE3A006A8089 /* OpenPantryController.swift */,
+				6245BE9A220DD513006A8089 /* RecipeViewController.swift */,
+			);
+			path = Contollers;
+			sourceTree = "<group>";
+		};
+		6245BE8C220CE07E006A8089 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				6252C6EF2226F32600DB6DB0 /* RecipeAPIClient.swift */,
+				6245BE8D220CE0C8006A8089 /* AppError.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		6245BE96220CE313006A8089 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6245BE94220CE2CB006A8089 /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6245BE99220CE82F006A8089 /* Data Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6245BE97220CE807006A8089 /* DataPersistenceManager.swift */,
+			);
+			path = "Data Helper";
+			sourceTree = "<group>";
+		};
+		6252C6EE2226F10600DB6DB0 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				6252C6EC2226F10200DB6DB0 /* SecretKeys.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		62AAE06F222D762100DF8BBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				62AAE06D222D761C00DF8BBC /* RecipeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		62AAE072222D765000DF8BBC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				62AAE070222D763D00DF8BBC /* RecipeCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C05FAA3367B78AE6BDB52C23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				797275D9F45B5A1D43A372FD /* Pods_OpenPantry.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6245BE85220CDE3B006A8089 /* Build configuration list for PBXNativeTarget "OpenPantry" */;
 			buildPhases = (
+				D9FDC31E6C8FFAC6D83F8BC8 /* [CP] Check Pods Manifest.lock */,
 				6245BE6F220CDE3A006A8089 /* Sources */,
 				6245BE70220CDE3A006A8089 /* Frameworks */,
 				6245BE71220CDE3A006A8089 /* Resources */,
+				14D81EF736A31755BAF42A14 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +244,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14D81EF736A31755BAF42A14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenPantry/Pods-OpenPantry-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenPantry/Pods-OpenPantry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9FDC31E6C8FFAC6D83F8BC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenPantry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6245BE6F220CDE3A006A8089 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6245BE79220CDE3A006A8089 /* ViewController.swift in Sources */,
+				62AAE071222D763D00DF8BBC /* RecipeCell.swift in Sources */,
+				62AAE06E222D761C00DF8BBC /* RecipeView.swift in Sources */,
+				6245BE95220CE2CB006A8089 /* Recipe.swift in Sources */,
+				6245BE79220CDE3A006A8089 /* OpenPantryController.swift in Sources */,
+				6245BE98220CE807006A8089 /* DataPersistenceManager.swift in Sources */,
+				6245BE8E220CE0C8006A8089 /* AppError.swift in Sources */,
 				6245BE77220CDE3A006A8089 /* AppDelegate.swift in Sources */,
+				6252C6F02226F32600DB6DB0 /* RecipeAPIClient.swift in Sources */,
+				6245BE9B220DD513006A8089 /* RecipeViewController.swift in Sources */,
+				6252C6ED2226F10200DB6DB0 /* SecretKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +449,7 @@
 		};
 		6245BE86220CDE3B006A8089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DF6162A50B5D9E1D7C71F93 /* Pods-OpenPantry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +468,7 @@
 		};
 		6245BE87220CDE3B006A8089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF3D89663CACBA202DBA9532 /* Pods-OpenPantry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
