@@ -20,6 +20,7 @@ class RecipeCell: UICollectionViewCell {
     lazy var recipeLabel: UILabel = {
         let label = UILabel()
         label.text = "Recipe Label"
+        label.alpha = 0.95
         label.backgroundColor = .white
         return label
     }()
