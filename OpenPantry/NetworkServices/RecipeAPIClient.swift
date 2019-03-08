@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class EdamamAPIClient {
+final class RecipeAPIClient {
     static func searchRecipes(keyword: String, completion: @escaping (AppError?, [RecipeInfo]?) -> Void) {
         let endpointURLString = "https://api.edamam.com/search?q=\(keyword)&app_id=\(SecretKeys.AppId)&app_key=\(SecretKeys.APIKey)&from=0&to=100"
         guard let url = URL(string: endpointURLString) else {

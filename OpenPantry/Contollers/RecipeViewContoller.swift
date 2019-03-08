@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class OpenPantryController: UIViewController {
+class RecipeViewController: UIViewController {
 
     let recipeView = RecipeView()
     
@@ -28,11 +28,11 @@ class OpenPantryController: UIViewController {
         recipeView.recipeCollectionView.dataSource = self
         recipeView.recipeCollectionView.delegate = self
         recipeView.recipeCollectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "RecipeCell")
-        getRecipes(keyword: "Salmon")
+        getRecipes(keyword: "Pizza")
     }
-
+    
     private func getRecipes(keyword: String) {
-        EdamamAPIClient.searchRecipes(keyword: keyword) { [weak self] (appError, recipes) in
+        RecipeAPIClient.searchRecipes(keyword: keyword) { [weak self] (appError, recipes) in
             if let appError = appError {
                 print(appError.errorMessage())
             } else if let recipes = recipes {
@@ -43,7 +43,7 @@ class OpenPantryController: UIViewController {
 
 }
 
-extension OpenPantryController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension RecipeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recipes.count
     }
@@ -52,17 +52,20 @@ extension OpenPantryController: UICollectionViewDataSource, UICollectionViewDele
         guard let cell = recipeView.recipeCollectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as? RecipeCell else {return UICollectionViewCell()}
         let recipe = recipes[indexPath.row]
         cell.recipeLabel.text = recipe.label
-        cell.recipeImage.kf.setImage(with: URL(string: recipe.image),
-                                    placeholder: UIImage(named: "plImage"))
+        cell.recipeImage.kf.setImage(with: URL(string: recipe.image),placeholder: UIImage(named: "plImage"))
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 6
         return cell
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = RecipeDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
 
-extension OpenPantryController: UISearchBarDelegate {
+extension RecipeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         guard let text = searchBar.text,

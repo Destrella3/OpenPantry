@@ -21,7 +21,7 @@ class RecipeView: UIView {
     
     lazy var searchBar: UISearchBar = {
         let sb = UISearchBar()
-        sb.placeholder = "Salmon"
+        sb.placeholder = "Pizza"
         return sb
     }()
     
