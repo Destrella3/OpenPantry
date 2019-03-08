@@ -10,7 +10,7 @@ import UIKit
 
 class RecipeDetailViewController: UIViewController {
     
-    private var recipe: RecipeInfo!
+    public var recipe: RecipeInfo!
     
     @IBOutlet weak var recipeDetailImage: UIImageView!
     @IBOutlet weak var recipeName: UILabel!
@@ -25,7 +25,10 @@ class RecipeDetailViewController: UIViewController {
         recipeDetailImage.kf.indicatorType = .activity
         recipeDetailImage.kf.setImage(with: URL(string: recipe.image),placeholder: UIImage(named: "plImage"))
         recipeName.text = recipe.label
-        recipeIngredients.text = recipe.ingredientLines.first
+        let sentences = recipe.ingredientLines.map { $0.replacingOccurrences(of: ",", with: "") }
+            .map { $0 + "\n" }
+        let ingredients = sentences.joined()
+        recipeIngredients.text = ingredients
     }
     
 }

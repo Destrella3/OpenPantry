@@ -23,7 +23,7 @@ class OpenPantryViewController: UIViewController {
     @IBOutlet weak var pantryTableView: UITableView!
     @IBOutlet weak var searchButton: UIButton!
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
         updateData()
@@ -42,6 +42,9 @@ class OpenPantryViewController: UIViewController {
         pantryTableView.layer.cornerRadius = 10
     }
     
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        
+    }
 }
 
 extension OpenPantryViewController: UITableViewDataSource, UITableViewDelegate {

@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 class RecipeViewController: UIViewController {
-
+    
     let recipeView = RecipeView()
     
     private var recipes = [RecipeInfo]() {
@@ -25,9 +25,9 @@ class RecipeViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(recipeView)
         recipeView.searchBar.delegate = self
+        recipeView.recipeCollectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "RecipeCell")
         recipeView.recipeCollectionView.dataSource = self
         recipeView.recipeCollectionView.delegate = self
-        recipeView.recipeCollectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "RecipeCell")
         getRecipes(keyword: "Pizza")
     }
     
@@ -40,10 +40,10 @@ class RecipeViewController: UIViewController {
             }
         }
     }
-
+    
 }
 
-extension RecipeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension RecipeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recipes.count
     }
@@ -59,8 +59,10 @@ extension RecipeViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = RecipeDetailViewController()
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecipeDetailViewController") as? RecipeDetailViewController else{return }
+        vc.recipe = recipes[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }
