@@ -43,6 +43,7 @@ class OpenPantryCollectionViewController: UIViewController {
         view.addSubview(recipeView)
         recipeView.recipeCollectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "RecipeCell")
         recipeView.recipeCollectionView.dataSource = self
+        recipeView.recipeCollectionView.delegate = self
         recipeView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             recipeView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
@@ -68,7 +69,7 @@ class OpenPantryCollectionViewController: UIViewController {
     }
 }
 
-extension OpenPantryCollectionViewController: UICollectionViewDataSource {
+extension OpenPantryCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recipes.count
     }
@@ -80,6 +81,12 @@ extension OpenPantryCollectionViewController: UICollectionViewDataSource {
         cell.recipeLabel.text = recipeToSet.label
         cell.sourceLabel.text = recipeToSet.source
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OpenPantryDetailViewController") as? OpenPantryDetailViewController else{return }
+        vc.recipe = recipes[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

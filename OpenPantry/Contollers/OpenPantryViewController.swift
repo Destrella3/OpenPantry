@@ -72,6 +72,8 @@ extension OpenPantryViewController: UITableViewDataSource, UITableViewDelegate {
         
         return [delete]
     }
+    
+    
 }
 
 extension OpenPantryViewController: UITextFieldDelegate {

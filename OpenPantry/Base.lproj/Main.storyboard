@@ -190,45 +190,51 @@
         <!--Open Pantry Detail View Controller-->
         <scene sceneID="Pl8-dC-GQA">
             <objects>
-                <viewController id="ZeC-uh-xlU" customClass="OpenPantryDetailViewController" customModule="OpenPantry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpenPantryDetailViewController" id="ZeC-uh-xlU" customClass="OpenPantryDetailViewController" customModule="OpenPantry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dXg-9Z-pce">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VbV-ZP-Cqs">
-                                <rect key="frame" x="12" y="56" width="351" height="300"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="0g7-kg-DPm"/>
+                                    <constraint firstAttribute="height" constant="250" id="aHA-ID-lF1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENV-Gx-HAB">
-                                <rect key="frame" x="8" y="368" width="359" height="21"/>
+                                <rect key="frame" x="8" y="306" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWr-qU-LQm">
-                                <rect key="frame" x="8" y="401" width="359" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UCQ-md-s7P">
+                                <rect key="frame" x="0.0" y="339" width="375" height="439"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XWr-qU-LQm" firstAttribute="leading" secondItem="IS6-jM-5hN" secondAttribute="leading" constant="8" id="0vE-6D-H97"/>
-                            <constraint firstItem="XWr-qU-LQm" firstAttribute="top" secondItem="ENV-Gx-HAB" secondAttribute="bottom" constant="12" id="5LH-RS-zmH"/>
-                            <constraint firstItem="VbV-ZP-Cqs" firstAttribute="leading" secondItem="IS6-jM-5hN" secondAttribute="leading" constant="12" id="6ed-6a-5tr"/>
-                            <constraint firstItem="VbV-ZP-Cqs" firstAttribute="top" secondItem="IS6-jM-5hN" secondAttribute="top" constant="12" id="8hB-gi-TBO"/>
-                            <constraint firstItem="IS6-jM-5hN" firstAttribute="trailing" secondItem="XWr-qU-LQm" secondAttribute="trailing" constant="8" id="QWT-Sb-Gv0"/>
-                            <constraint firstItem="ENV-Gx-HAB" firstAttribute="top" secondItem="VbV-ZP-Cqs" secondAttribute="bottom" constant="12" id="TKr-eV-u9T"/>
-                            <constraint firstItem="IS6-jM-5hN" firstAttribute="trailing" secondItem="ENV-Gx-HAB" secondAttribute="trailing" constant="8" id="eOh-CS-1gn"/>
-                            <constraint firstItem="ENV-Gx-HAB" firstAttribute="leading" secondItem="IS6-jM-5hN" secondAttribute="leading" constant="8" id="mKA-xm-0Gh"/>
-                            <constraint firstItem="VbV-ZP-Cqs" firstAttribute="top" secondItem="IS6-jM-5hN" secondAttribute="top" constant="12" id="nW8-Rf-Lat"/>
-                            <constraint firstItem="IS6-jM-5hN" firstAttribute="trailing" secondItem="VbV-ZP-Cqs" secondAttribute="trailing" constant="12" id="ugk-MH-WRd"/>
+                            <constraint firstItem="VbV-ZP-Cqs" firstAttribute="top" secondItem="IS6-jM-5hN" secondAttribute="top" id="1dr-i8-uvf"/>
+                            <constraint firstItem="IS6-jM-5hN" firstAttribute="bottom" secondItem="UCQ-md-s7P" secondAttribute="bottom" id="6ih-Jp-rKK"/>
+                            <constraint firstItem="IS6-jM-5hN" firstAttribute="trailing" secondItem="VbV-ZP-Cqs" secondAttribute="trailing" id="KEY-ZF-Oca"/>
+                            <constraint firstItem="UCQ-md-s7P" firstAttribute="leading" secondItem="IS6-jM-5hN" secondAttribute="leading" id="XdQ-nk-2o2"/>
+                            <constraint firstItem="ENV-Gx-HAB" firstAttribute="top" secondItem="VbV-ZP-Cqs" secondAttribute="bottom" constant="12" id="ZmS-vz-gLw"/>
+                            <constraint firstItem="VbV-ZP-Cqs" firstAttribute="leading" secondItem="IS6-jM-5hN" secondAttribute="leading" id="faO-AZ-szT"/>
+                            <constraint firstItem="UCQ-md-s7P" firstAttribute="top" secondItem="ENV-Gx-HAB" secondAttribute="bottom" constant="12" id="k3p-Ft-XPZ"/>
+                            <constraint firstItem="IS6-jM-5hN" firstAttribute="trailing" secondItem="ENV-Gx-HAB" secondAttribute="trailing" constant="8" id="nMv-dB-ntw"/>
+                            <constraint firstItem="IS6-jM-5hN" firstAttribute="trailing" secondItem="UCQ-md-s7P" secondAttribute="trailing" id="tDn-9M-8Jf"/>
+                            <constraint firstItem="ENV-Gx-HAB" firstAttribute="leading" secondItem="IS6-jM-5hN" secondAttribute="leading" constant="8" id="y0p-3H-RR8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IS6-jM-5hN"/>
                     </view>
+                    <connections>
+                        <outlet property="recipeImage" destination="VbV-ZP-Cqs" id="C1N-jA-Db2"/>
+                        <outlet property="recipeIngredents" destination="UCQ-md-s7P" id="tcH-vq-CZA"/>
+                        <outlet property="recipeName" destination="ENV-Gx-HAB" id="crY-lo-5ju"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyR-5k-656" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
