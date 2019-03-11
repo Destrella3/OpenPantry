@@ -78,6 +78,7 @@ extension OpenPantryCollectionViewController: UICollectionViewDataSource {
         let recipeToSet = recipes[indexPath.row]
         cell.recipeImage.kf.setImage(with: URL(string: recipeToSet.image),placeholder: UIImage(named: "plImage"))
         cell.recipeLabel.text = recipeToSet.label
+        cell.sourceLabel.text = recipeToSet.source
         return cell
     }
     

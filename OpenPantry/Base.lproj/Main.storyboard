@@ -128,10 +128,10 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHu-2t-GEh">
-                                <rect key="frame" x="100" y="537" width="175" height="35"/>
-                                <color key="backgroundColor" red="0.24831091833422669" green="0.59462246192893398" blue="0.28350935389969378" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="100" y="537" width="175" height="40"/>
+                                <color key="backgroundColor" red="0.28670862317085266" green="0.6386333703994751" blue="0.32543081045150757" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="jaN-bU-Lmq"/>
+                                    <constraint firstAttribute="height" constant="40" id="jaN-bU-Lmq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Search">
