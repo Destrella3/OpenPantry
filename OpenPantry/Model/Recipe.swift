@@ -22,7 +22,7 @@ struct RecipeInfo: Codable {
     let source: String
     let url: String
     let shareAs: String
-    let yield: Int
+    let yield: Double
     let dietLabels: [String]
     let healthLabels: [String]
     let ingredientLines: [String]

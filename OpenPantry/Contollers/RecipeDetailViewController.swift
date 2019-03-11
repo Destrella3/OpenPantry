@@ -14,14 +14,14 @@ class RecipeDetailViewController: UIViewController {
     
     @IBOutlet weak var recipeDetailImage: UIImageView!
     @IBOutlet weak var recipeName: UILabel!
-    @IBOutlet weak var recipeIngredients: UILabel!
+    @IBOutlet weak var recipeIngredients: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        uploadData()
+        downloadData()
     }
     
-    private func uploadData() {
+    private func downloadData() {
         recipeDetailImage.kf.indicatorType = .activity
         recipeDetailImage.kf.setImage(with: URL(string: recipe.image),placeholder: UIImage(named: "plImage"))
         recipeName.text = recipe.label

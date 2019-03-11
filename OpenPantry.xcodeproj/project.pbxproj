@@ -23,6 +23,8 @@
 		62AAE076222ECFE300DF8BBC /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAE075222ECFE300DF8BBC /* RecipeDetailViewController.swift */; };
 		62AAE0782231782300DF8BBC /* OpenPantryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAE0772231782200DF8BBC /* OpenPantryDetailViewController.swift */; };
 		62AAE07A2231789900DF8BBC /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAE0792231789900DF8BBC /* FavoriteViewController.swift */; };
+		62AAE07C223572C100DF8BBC /* OpenPantryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAE07B223572C100DF8BBC /* OpenPantryCollectionViewController.swift */; };
+		62AAE07E2235769300DF8BBC /* FavoriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAE07D2235769300DF8BBC /* FavoriteDetailViewController.swift */; };
 		BACAF70DD93D20B1B3B58589 /* Pods_OpenPantry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797275D9F45B5A1D43A372FD /* Pods_OpenPantry.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		62AAE075222ECFE300DF8BBC /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		62AAE0772231782200DF8BBC /* OpenPantryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPantryDetailViewController.swift; sourceTree = "<group>"; };
 		62AAE0792231789900DF8BBC /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		62AAE07B223572C100DF8BBC /* OpenPantryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPantryCollectionViewController.swift; sourceTree = "<group>"; };
+		62AAE07D2235769300DF8BBC /* FavoriteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetailViewController.swift; sourceTree = "<group>"; };
 		797275D9F45B5A1D43A372FD /* Pods_OpenPantry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenPantry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF6162A50B5D9E1D7C71F93 /* Pods-OpenPantry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenPantry.debug.xcconfig"; path = "Target Support Files/Pods-OpenPantry/Pods-OpenPantry.debug.xcconfig"; sourceTree = "<group>"; };
 		FF3D89663CACBA202DBA9532 /* Pods-OpenPantry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenPantry.release.xcconfig"; path = "Target Support Files/Pods-OpenPantry/Pods-OpenPantry.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,8 +126,10 @@
 				6245BE78220CDE3A006A8089 /* RecipeViewContoller.swift */,
 				62AAE075222ECFE300DF8BBC /* RecipeDetailViewController.swift */,
 				6245BE9A220DD513006A8089 /* OpenPantryViewController.swift */,
+				62AAE07B223572C100DF8BBC /* OpenPantryCollectionViewController.swift */,
 				62AAE0772231782200DF8BBC /* OpenPantryDetailViewController.swift */,
 				62AAE0792231789900DF8BBC /* FavoriteViewController.swift */,
+				62AAE07D2235769300DF8BBC /* FavoriteDetailViewController.swift */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			files = (
 				62AAE071222D763D00DF8BBC /* RecipeCell.swift in Sources */,
 				62AAE0782231782300DF8BBC /* OpenPantryDetailViewController.swift in Sources */,
+				62AAE07E2235769300DF8BBC /* FavoriteDetailViewController.swift in Sources */,
 				62AAE06E222D761C00DF8BBC /* RecipeView.swift in Sources */,
 				6245BE95220CE2CB006A8089 /* Recipe.swift in Sources */,
 				6245BE79220CDE3A006A8089 /* RecipeViewContoller.swift in Sources */,
@@ -315,6 +322,7 @@
 				6245BE77220CDE3A006A8089 /* AppDelegate.swift in Sources */,
 				62AAE076222ECFE300DF8BBC /* RecipeDetailViewController.swift in Sources */,
 				62AAE07A2231789900DF8BBC /* FavoriteViewController.swift in Sources */,
+				62AAE07C223572C100DF8BBC /* OpenPantryCollectionViewController.swift in Sources */,
 				6252C6F02226F32600DB6DB0 /* RecipeAPIClient.swift in Sources */,
 				6245BE9B220DD513006A8089 /* OpenPantryViewController.swift in Sources */,
 				6252C6ED2226F10200DB6DB0 /* SecretKeys.swift in Sources */,

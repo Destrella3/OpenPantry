@@ -9,7 +9,7 @@
 import UIKit
 
 class OpenPantryViewController: UIViewController {
-    
+
     private var recipes = [RecipeInfo]()
     private var ingredients = [String]() {
         didSet {
@@ -42,8 +42,9 @@ class OpenPantryViewController: UIViewController {
         pantryTableView.layer.cornerRadius = 10
     }
     
-    @IBAction func searchButtonPressed(_ sender: Any) {
-        
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        let vc = OpenPantryCollectionViewController.fromStoryBoard(ingredients: ingredients)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -61,6 +62,16 @@ extension OpenPantryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { [weak self] (action, indexPath) in
+            self?.ingredients.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        return [delete]
+    }
 }
 
 extension OpenPantryViewController: UITextFieldDelegate {
@@ -68,6 +79,7 @@ extension OpenPantryViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         let ingredient = pantryTextField.text
         ingredients.append(ingredient ?? "Not Found")
+        pantryTextField.text = ""
         return true
     }
 }

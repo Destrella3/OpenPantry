@@ -13,6 +13,8 @@ class RecipeViewController: UIViewController {
     
     let recipeView = RecipeView()
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     private var recipes = [RecipeInfo]() {
         didSet {
             DispatchQueue.main.async {
@@ -23,12 +25,23 @@ class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupRecipeView()
+        searchBar.delegate = self
+        getRecipes(keyword: "Pizza")
+    }
+    
+    private func setupRecipeView() {
         view.addSubview(recipeView)
-        recipeView.searchBar.delegate = self
         recipeView.recipeCollectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "RecipeCell")
         recipeView.recipeCollectionView.dataSource = self
         recipeView.recipeCollectionView.delegate = self
-        getRecipes(keyword: "Pizza")
+        recipeView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            recipeView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 0),
+            recipeView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            recipeView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            recipeView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+            ])
     }
     
     private func getRecipes(keyword: String) {
@@ -52,6 +65,7 @@ extension RecipeViewController: UICollectionViewDataSource, UICollectionViewDele
         guard let cell = recipeView.recipeCollectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as? RecipeCell else {return UICollectionViewCell()}
         let recipe = recipes[indexPath.row]
         cell.recipeLabel.text = recipe.label
+        cell.sourceLabel.text = recipe.source
         cell.recipeImage.kf.setImage(with: URL(string: recipe.image),placeholder: UIImage(named: "plImage"))
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 6
@@ -62,7 +76,6 @@ extension RecipeViewController: UICollectionViewDataSource, UICollectionViewDele
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecipeDetailViewController") as? RecipeDetailViewController else{return }
         vc.recipe = recipes[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     
 }
